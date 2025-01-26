@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="dns-prefetch" href="//unpkg.com" />
+	<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+	<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</head>
+<body>
+
+	<div class="top">
+        <h1>
+            <span>Daily Moo Mood</span>
+            <img src="assets/img/signin-title.png" class="img-signin-title">
+        </h1>
+        <div class="popUp">
+            <div class="flex items-center justify-center">
+                <div class="max-w-md w-full p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Sign Up</h2>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input 
+                                type="email" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                                placeholder="your@email.com"
+                            />
+                        </div>
+                    
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                            <input 
+                                type="password" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                                placeholder="••••••••"
+                            />
+                        </div>
+                        <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 rounded-lg transition-colors my-2" onclick="location.href='landingPage.html'" type="button">
+                            Sign Up
+                        </button>
+                    </form>
+              
+                    <div class="mt-6 text-center text-sm text-gray-600">
+                        Already have an account? 
+                        <a href="signIn.html" class="text-indigo-600 hover:text-indigo-500 font-medium">Sign In</a>
+                    </div>
+                </div>
+              </div>
+        </div>
+        
+        <img src="assets/img/bg.png" class="img-bg" alt="">
+        <img src="assets/img/sun.png" class="img-sun">
+        <!-- <img src="assets/img/cow.png" class="img-cow" alt=""> -->
+    </div>
+    <footer>
+        <p>© How's going Arizona?</p>
+    </footer>
+	<style>
+		body{
+			margin: auto 0;
+		}
+        .popUp{
+            background: #fff;
+            border: #000 solid 3px;
+            min-width: 500px;
+            max-width: 800px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 10;
+        }
+		.top{
+			background: #61A5DB;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+            flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+        h1 span{
+            opacity: 0;
+        }
+        .img-title{
+            height: auto;
+            width: 75vw;
+            z-index: 10;
+            position: relative;
+        }
+        .img-signin-title{
+            height: auto;
+            max-width: 300px;
+            z-index: 10;
+            position: relative;
+        }
+        .btn-signin{
+            position: relative;
+            z-index: 10;
+            background: #fff;
+            border: #000 solid 2px;
+            padding: 10px 40px;
+            border-radius: 5px;
+            font-size: 21px;
+            margin-top: 30px;
+        }
+		.img-bg{
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			height: auto;
+			left: 0;
+            z-index: 8;
+		}
+		.img-cow{
+			position: absolute;
+			width: auto;
+			height: 150px;
+			right: 100px;
+			bottom: 150px;
+            z-index: 10;
+		}
+		.img-sun{
+			position: absolute;
+			width: auto;
+			height: 80px;
+			top: 100px;
+			left: 100px;
+		}
+		h1, h2{
+			text-align: center;
+			margin: 0;
+			padding: 10px 0;
+		}
+		.bg-2{
+			background: #75B864;
+		}
+		.bg-calendar{
+			background: rgba(255, 255, 255, 0.4);
+		}
+		footer{
+			background: #000;
+			color: #fff;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		footer p{
+			margin: 0;
+		}
+	</style>
+</body>
+</html>
