@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\DailyMooMood\web\DailyMooMood\DailyMooMood\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-01-26T14:34:34.3963174Z||;True|2025-01-26T22:23:35.5390074+08:00||;True|2025-01-26T21:58:31.8693642+08:00||;True|2025-01-26T21:57:53.0711872+08:00||;True|2025-01-26T21:51:07.3686400+08:00||;True|2025-01-26T21:50:29.1196203+08:00||;True|2025-01-26T21:49:34.2750492+08:00||;True|2025-01-26T21:48:42.9565317+08:00||;True|2025-01-26T21:45:08.2871912+08:00||;True|2025-01-26T21:40:43.1164852+08:00||;False|2025-01-26T21:40:32.3899917+08:00||;True|2025-01-26T20:18:23.3490246+08:00||;True|2025-01-26T20:16:37.6643307+08:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,541 @@
+﻿@model LandingPageViewModel
+<header>
+    <h1>
+        <span>Daily Moo Mood</span>
+        <img src="~/assets/img/title.png" class="img-title">
+    </h1>
+    <div class="welcome-name">
+        <a asp-action="SignOut" class="btn-signOut">
+            <img src="~/assets/img/right-from-bracket-solid.svg" alt="">
+            Sign Out
+        </a>
+        <p>Welcome! @User.Identity?.Name.</p>
+    </div>
+</header>
+<div class="top-title">
+    <img src="~/assets/img/landing-title.png" class="img-landing-title" alt="">
+    <p>@Model.Date</p>
+</div>
+<div class="top">
+    <div class="face-wrap">
+        @switch (Model.Type)
+        {
+            case 1:
+                <img src="~/assets/img/f-1.png" class="img-face" alt="">
+                break;
+            case 2:
+                <img src="~/assets/img/f-2.png" class="img-face" alt="">
+                break;
+            case 3:
+                <img src="~/assets/img/f-3.png" class="img-face" alt="">
+                break;
+            case 4:
+                <img src="~/assets/img/f-4.png" class="img-face" alt="">
+                break;
+            case 5:
+                <img src="~/assets/img/f-5.png" class="img-face" alt="">
+                break;
+            default:
+                break;
+        }
+        <p>@Model.Comment</p>
+    </div>
+    <a asp-action="Clues" asp-route-date="@Model.Date" class="btn-clue">
+        <img src="~/assets/img/vtc.png" class="vtc" alt="">
+    </a>
+    <img src="~/assets/img/circle.png" class="img-circle" alt="">
+    <img src="~/assets/img/bg.png" class="img-bg" alt="">
+    <img src="~/assets/img/cow.png" class="img-cow" alt="">
+</div>
+<a asp-action="Today" asp-route-date="@DateTime.Today.ToString("yyyy/MM/dd")" class="float-wrap">
+    <img src="~/assets/img/eyes.png" class="glasses" alt="">
+    <p>View Today</p>
+</a>
+<div class="bg-2">
+    <div class="calendar-title-wrapper">
+        <img src="~/assets/img/calendar-title.png" class="calendar-title" alt="">
+    </div>
+    <!-- This is an calendar component -->
+    <div class="h-screen overflow-hidden flex items-center justify-center">
+
+
+        <style>
+            [x-cloak] {
+                display: none;
+            }
+        </style>
+
+        <div class="antialiased sans-serif h-screen">
+            <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
+                <div class="container mx-auto px-4 py-2 md:py-24">
+
+                    <!-- <div class="font-bold text-gray-800 text-xl mb-4">
+                        Schedule Tasks
+                    </div> -->
+
+                    <div class="rounded-lg shadow bg-calendar overflow-hidden">
+
+                        <div class="flex items-center justify-between py-2 px-6">
+                            <div>
+                                <span x-text="MONTH_NAMES[month]" class="text-lg font-bold text-gray-800"></span>
+                                <span x-text="year" class="ml-1 text-lg text-gray-600 font-normal"></span>
+                            </div>
+                            <div class="border rounded-lg px-1" style="padding-top: 2px;">
+                                <button type="button"
+                                        class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center"
+                                        :class="{'cursor-not-allowed opacity-25': month == 0 }"
+                                        :disabled="month == 0 ? true : false"
+                                        @@click="month--; getNoOfDays()">
+                                    <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <div class="border-r inline-flex h-6"></div>
+                                <button type="button"
+                                        class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1"
+                                        :class="{'cursor-not-allowed opacity-25': month == 11 }"
+                                        :disabled="month == 11 ? true : false"
+                                        @@click="month++; getNoOfDays()">
+                                    <svg class="h-6 w-6 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="-mx-1 -mb-1">
+                            <div class="flex flex-wrap" style="margin-bottom: -40px;">
+                                <template x-for="(day, index) in DAYS" :key="index">
+                                    <div style="width: 14.26%" class="px-2 py-2">
+                                        <div x-text="day"
+                                             class="text-gray-600 text-sm uppercase tracking-wide font-bold text-center"></div>
+                                    </div>
+                                </template>
+                            </div>
+
+                            <div class="flex flex-wrap border-t border-l">
+                                <template x-for="blankday in blankdays">
+                                    <div style="width: 14.28%; height: 120px"
+                                         class="text-center border-r border-b px-4 pt-2"></div>
+                                </template>
+                                <template x-for="(date, dateIndex) in no_of_days" :key="dateIndex">
+                                    <div style="width: 14.28%; height: 120px" class="px-4 pt-2 border-r border-b relative">
+                                        <div @@click="showEventModal(date)"
+                                             x-text="date"
+                                             class="inline-flex w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100"
+                                             :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"></div>
+                                        <div style="height: 80px;" class="overflow-y-auto mt-1">
+                                            <!-- <div
+                                                class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
+                                                x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
+                                                x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
+
+                                            <template x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">
+                                                <div class="px-2 py-1 rounded-lg mt-1 overflow-hidden border"
+                                                     :class="{
+															'border-blue-200 text-blue-800 bg-blue-100': event.event_theme === 'blue',
+															'border-red-200 text-red-800 bg-red-100': event.event_theme === 'red',
+															'border-yellow-200 text-yellow-800 bg-yellow-100': event.event_theme === 'yellow',
+															'border-green-200 text-green-800 bg-green-100': event.event_theme === 'green',
+															'border-purple-200 text-purple-800 bg-purple-100': event.event_theme === 'purple'
+														}">
+                                                    <p x-text="event.event_title" class="text-sm truncate leading-tight"></p>
+                                                    <!-- Check event type and display corresponding image -->
+                                                    <img x-show="event.type === 1" src="~/assets/img/mb-1.png" alt="Type 1" class="w-6 h-6" />
+                                                    <img x-show="event.type === 2" src="~/assets/img/mb-2.png" alt="Type 2" class="w-6 h-6" />
+                                                    <img x-show="event.type === 3" src="~/assets/img/mb-3.png" alt="Type 3" class="w-6 h-6" />
+                                                    <img x-show="event.type === 4" src="~/assets/img/mb-4.png" alt="Type 4" class="w-6 h-6" />
+                                                    <img x-show="event.type === 5" src="~/assets/img/mb-5.png" alt="Type 5" class="w-6 h-6" />
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                const rawDataJson = '@Html.Raw(ViewBag.Json)';
+                const rawData = JSON.parse(rawDataJson);
+                function app() {
+                    return {
+                        month: '',
+                        year: '',
+                        no_of_days: [],
+                        blankdays: [],
+                        days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                        events: rawData.map(item => {
+                            return {
+                                event_date: new Date(item.Date),
+                                type: item.Type
+                            }
+                        }),
+                        event_title: '',
+                        event_date: '',
+                        event_theme: 'blue',
+
+                        themes: [
+                            {
+                                value: "blue",
+                                label: "Blue Theme"
+                            },
+                            {
+                                value: "red",
+                                label: "Red Theme"
+                            },
+                            {
+                                value: "yellow",
+                                label: "Yellow Theme"
+                            },
+                            {
+                                value: "green",
+                                label: "Green Theme"
+                            },
+                            {
+                                value: "purple",
+                                label: "Purple Theme"
+                            }
+                        ],
+
+                        openEventModal: false,
+
+                        initDate() {
+                            let today = new Date();
+                            this.month = today.getMonth();
+                            this.year = today.getFullYear();
+                            this.datepickerValue = new Date(this.year, this.month, today.getDate()).toDateString();
+                        },
+
+                        isToday(date) {
+                            const today = new Date();
+                            const d = new Date(this.year, this.month, date);
+
+                            return today.toDateString() === d.toDateString() ? true : false;
+                        },
+
+                        showEventModal(date) {
+                            this.openEventModal = true;
+                            let selectedDate = new Date(this.year, this.month, date);
+                            let formattedDate = `${selectedDate.getFullYear()}/` +
+                                `${(selectedDate.getMonth() + 1).toString().padStart(2, '0')}/` +
+                                `${selectedDate.getDate().toString().padStart(2, '0')}`;
+                            this.event_date = formattedDate;
+
+                            location.href = "/Home/Today?date=" + formattedDate;
+                        },
+
+                        addEvent() {
+                            if (this.event_title == '') {
+                                return;
+                            }
+
+                            this.events.push({
+                                event_date: this.event_date,
+                                event_title: this.event_title,
+                                event_theme: this.event_theme
+                            });
+
+                            console.log(this.events);
+
+                            // clear the form data
+                            this.event_title = '';
+                            this.event_date = '';
+                            this.event_theme = 'blue';
+
+                            //close the modal
+                            this.openEventModal = false;
+                        },
+
+                        getNoOfDays() {
+                            let daysInMonth = new Date(this.year, this.month + 1, 0).getDate();
+
+                            // find where to start calendar day of week
+                            let dayOfWeek = new Date(this.year, this.month).getDay();
+                            let blankdaysArray = [];
+                            for (var i = 1; i <= dayOfWeek; i++) {
+                                blankdaysArray.push(i);
+                            }
+
+                            let daysArray = [];
+                            for (var i = 1; i <= daysInMonth; i++) {
+                                daysArray.push(i);
+                            }
+
+                            this.blankdays = blankdaysArray;
+                            this.no_of_days = daysArray;
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <p>© How's going Arizona?</p>
+</footer>
+<style>
+    body {
+        position: relative;
+    }
+
+    .float-wrap {
+        border-radius: 50%;
+        border: #fff solid 2px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+    }
+
+        .float-wrap:hover {
+            transition: all .3s linear;
+            background: rgba(255, 255, 255, .3);
+        }
+
+        .float-wrap img {
+            width: 28px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .float-wrap p {
+            color: #fff;
+            font-size: 11px;
+        }
+
+    .calendar-title-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .calendar-title {
+        width: auto;
+        height: 80px;
+    }
+
+    .clues-content {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        max-width: 500px;
+        padding-bottom: 200px;
+    }
+
+        .clues-content h3 {
+            font-weight: 800;
+            padding: 10px 0;
+        }
+
+    .clues-title-wrapper {
+        display: flex;
+        justify-content: start;
+        background: #61A5DB;
+        padding: 20px;
+    }
+
+    .clues-title {
+        width: 350px;
+        height: auto;
+    }
+
+    .img-cactus {
+        position: absolute;
+        z-index: 10;
+        bottom: 10%;
+        right: 10%;
+        width: 250px;
+        height: auto;
+    }
+
+    .img-plate {
+        position: absolute;
+        z-index: 9;
+        bottom: 10%;
+        width: 880px;
+        height: auto;
+    }
+
+    .img-milk {
+        position: absolute;
+        z-index: 10;
+        bottom: 10%;
+        left: 10%;
+        width: 150px;
+        height: auto;
+    }
+
+    body {
+        margin: auto 0;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #61A5DB;
+        padding: 0px 20px;
+    }
+
+        header a {
+            display: block;
+        }
+
+    h1 span {
+        opacity: 0;
+    }
+
+    .btn-signOut {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 800;
+        display: flex;
+        text-shadow: 0 0 2px #000;
+        transition: all .3s linear;
+    }
+
+        .btn-signOut:hover {
+            transition: all .3s linear;
+            color: #dadada;
+        }
+
+        .btn-signOut img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+
+    .btn-clue {
+        position: absolute;
+        left: 200px;
+        bottom: 380px;
+        display: block;
+    }
+
+    .vtc {
+        width: 180px;
+        height: auto;
+    }
+
+    .top {
+        background: #61A5DB;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        position: relative;
+    }
+
+    .top-title {
+        color: #fff;
+        background: #61A5DB;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .top-title img {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+    .welcome-name {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        color: #fff;
+        text-shadow: 0 0 2px #000;
+    }
+
+    .face-wrap {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .img-face {
+        margin-bottom: 20px;
+        width: 180px;
+        height: auto;
+    }
+
+    .img-bg {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+
+    .img-cow {
+        position: absolute;
+        width: auto;
+        height: 200px;
+        left: 100px;
+        bottom: 150px;
+    }
+
+    .img-sun {
+        position: absolute;
+        width: auto;
+        height: 80px;
+        top: 100px;
+        left: 100px;
+    }
+
+    .img-circle {
+        position: absolute;
+        width: 53%;
+        height: auto;
+        z-index: 9;
+        bottom: 35%;
+    }
+
+    .img-landing-title {
+        height: 100px;
+        width: auto;
+    }
+
+    h1, h2 {
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .bg-2 {
+        background: #75B864;
+    }
+
+    .bg-calendar {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    header .img-title {
+        width: 200px;
+        height: auto;
+    }
+
+    footer {
+        background: #000;
+        color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+        footer p {
+            margin: 0;
+        }
+</style>

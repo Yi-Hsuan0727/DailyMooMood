@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DailyMooMood\\web\\DailyMooMood\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\home\\clues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\home\\clues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\home\\landingpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\home\\landingpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\home\\today.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\home\\today.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\models\\landingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\models\\landingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\models\\signinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\models\\signinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\dailymoomood.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\dailymoomood.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\models\\cluesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\models\\cluesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|c:\\dailymoomood\\web\\dailymoomood\\dailymoomood\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754D4CD0-C8FD-4C03-A6DA-293E0E01D684}|DailyMooMood\\DailyMooMood.csproj|solutionrelative:dailymoomood\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Today.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\Today.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Home\\Today.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\Today.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Home\\Today.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T12:58:23.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DailyMooMood",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\DailyMooMood.csproj",
+              "RelativeDocumentMoniker": "DailyMooMood\\DailyMooMood.csproj",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\DailyMooMood.csproj",
+              "RelativeToolTip": "DailyMooMood\\DailyMooMood.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-26T12:14:38.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CluesViewModel.cs",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Models\\CluesViewModel.cs",
+              "RelativeDocumentMoniker": "DailyMooMood\\Models\\CluesViewModel.cs",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Models\\CluesViewModel.cs",
+              "RelativeToolTip": "DailyMooMood\\Models\\CluesViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T11:41:31.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Clues.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\Clues.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Home\\Clues.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\Clues.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Home\\Clues.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T11:22:33.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LandingPageViewModel.cs",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Models\\LandingPageViewModel.cs",
+              "RelativeDocumentMoniker": "DailyMooMood\\Models\\LandingPageViewModel.cs",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Models\\LandingPageViewModel.cs",
+              "RelativeToolTip": "DailyMooMood\\Models\\LandingPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T08:57:30.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LandingPage.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\LandingPage.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Home\\LandingPage.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\LandingPage.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Home\\LandingPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T08:13:53.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Program.cs",
+              "RelativeDocumentMoniker": "DailyMooMood\\Program.cs",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Program.cs",
+              "RelativeToolTip": "DailyMooMood\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T08:04:43.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SignInViewModel.cs",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Models\\SignInViewModel.cs",
+              "RelativeDocumentMoniker": "DailyMooMood\\Models\\SignInViewModel.cs",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Models\\SignInViewModel.cs",
+              "RelativeToolTip": "DailyMooMood\\Models\\SignInViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:41:30.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Home\\SignUp.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\SignUp.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Home\\SignUp.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T07:36:53.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SignIn.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\SignIn.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Home\\SignIn.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\SignIn.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Home\\SignIn.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T07:33:42.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T07:25:09.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DailyMooMood\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DailyMooMood\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T07:23:29.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DailyMooMood\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\DailyMooMood\\web\\DailyMooMood\\DailyMooMood\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DailyMooMood\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAowLUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:13:43.026Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
