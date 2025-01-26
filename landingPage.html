@@ -29,7 +29,7 @@
 			<img src="assets/img/landing-title.png" class="img-landing-title" alt="">
 			<p>Jan / 25 / 2025</p>
 			<!-- date format can be changed by the wish of our lovely engineer -->
-			 <div class="mood-btns">
+			 <!-- <div class="mood-btns">
 				<a href="#" class="mood-btn mood-1">
 					<img src="assets/img/m-1.png" alt="">
 				</a>
@@ -45,7 +45,30 @@
 				<a href="#" class="mood-btn mood-5">
 					<img src="assets/img/m-5.png" alt="">
 				</a>
-			 </div>
+			 </div> -->
+			<!-- The checkbox input and the custom checkbox -->
+			<form class="check-form">
+				<label>
+					<input type="checkbox" id="checkbox" onchange="updateSelection(this)">
+					<div class="custom-checkbox check-1"></div>
+				</label>
+				<label>
+					<input type="checkbox" id="checkbox" onchange="updateSelection(this)">
+					<div class="custom-checkbox check-2"></div>
+				</label>
+				<label>
+					<input type="checkbox" id="checkbox" onchange="updateSelection(this)">
+					<div class="custom-checkbox check-3"></div>
+				</label>
+				<label>
+					<input type="checkbox" id="checkbox" onchange="updateSelection(this)">
+					<div class="custom-checkbox check-4"></div>
+				</label>
+				<label>
+					<input type="checkbox" id="checkbox" onchange="updateSelection(this)">
+					<div class="custom-checkbox check-5"></div>
+				</label>
+			</form>
 			 <form>
 				 <div class="w-full my-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
 					 <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
@@ -375,6 +398,86 @@
         <p>© How's going Arizona?</p>
     </footer>
 	<style>
+		/* Hide the default checkbox */
+		input[type="checkbox"] {
+		  display: none;
+		}
+		.check-form{
+			display: flex;
+		}
+		.check-form label{
+			margin: 20px 10px;
+			transition: all .3s linear;
+		}
+		.check-form label:hover{
+			filter: brightness(50%);
+			transition: all .3s linear;
+		}
+		/* Darken unselected images */
+		.custom-checkbox.dark {
+		filter: brightness(50%);
+		}
+		/* Style for the image (unchecked state) */
+		.custom-checkbox {
+		  width: 119px;
+		  height: 90px;
+		  background-size: cover;
+		  background-position: center;
+		  cursor: pointer;
+		}
+		.check-1{
+			background-image: url('assets/img/mb-1.png'); /* Replace with your image URL */
+		}
+		.check-2{
+			background-image: url('assets/img/mb-2.png'); /* Replace with your image URL */
+		}
+		.check-3{
+			background-image: url('assets/img/mb-3.png'); /* Replace with your image URL */
+		}
+		.check-4{
+			background-image: url('assets/img/mb-4.png'); /* Replace with your image URL */
+		}
+		.check-5{
+			background-image: url('assets/img/mb-5.png'); /* Replace with your image URL */
+		}
+		/* Style for the image (checked state) */
+		input[type="checkbox"]:checked + .custom-checkbox.check-1 {
+		  background-image: url('assets/img/mb-1.png'); /* Replace with your image URL */
+		}
+		input[type="checkbox"]:checked + .custom-checkbox.check-2 {
+		  background-image: url('assets/img/mb-2.png'); /* Replace with your image URL */
+		}
+		input[type="checkbox"]:checked + .custom-checkbox.check-3 {
+		  background-image: url('assets/img/mb-3.png'); /* Replace with your image URL */
+		}
+		input[type="checkbox"]:checked + .custom-checkbox.check-4 {
+		  background-image: url('assets/img/mb-4.png'); /* Replace with your image URL */
+		}
+		input[type="checkbox"]:checked + .custom-checkbox.check-5 {
+		  background-image: url('assets/img/mb-5.png'); /* Replace with your image URL */
+		}
+	</style>
+	<script>
+	function updateSelection(selectedCheckbox) {
+		// Get all checkboxes and custom checkboxes
+		const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+		const customCheckboxes = document.querySelectorAll('.custom-checkbox');
+
+		checkboxes.forEach((checkbox, index) => {
+		if (checkbox === selectedCheckbox) {
+			// Only keep the selected checkbox checked
+			checkbox.checked = true;
+			customCheckboxes[index].classList.remove('dark');
+		} else {
+			// Uncheck all others and darken their images
+			checkbox.checked = false;
+			customCheckboxes[index].classList.add('dark');
+		}
+		});
+	}
+	</script>
+	<style>
+		
 		body{
 			margin: auto 0;
 		}
@@ -396,7 +499,6 @@
 			font-size: 18px;
 			font-weight: 800;
 			display: flex;
-			justify-content: center;
 			text-shadow: 0 0 2px #000;
 			transition: all .3s linear;
 		}
