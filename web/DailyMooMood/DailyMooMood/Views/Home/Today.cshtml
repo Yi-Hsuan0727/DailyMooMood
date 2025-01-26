@@ -131,7 +131,7 @@
                                                 x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
 
                                             <template x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">
-                                                <div class="px-2 py-1 rounded-lg mt-1 overflow-hidden border"
+                                                <div class="px-2 py-1 rounded-lg mt-1 overflow-hidden"
                                                      :class="{
 															'border-blue-200 text-blue-800 bg-blue-100': event.event_theme === 'blue',
 															'border-red-200 text-red-800 bg-red-100': event.event_theme === 'red',
@@ -141,11 +141,11 @@
 														}">
                                                     <p x-text="event.event_title" class="text-sm truncate leading-tight"></p>
                                                     <!-- Check event type and display corresponding image -->
-                                                    <img x-show="event.type === 1" src="~/assets/img/mb-1.png" alt="Type 1" class="w-6 h-6" />
-                                                    <img x-show="event.type === 2" src="~/assets/img/mb-2.png" alt="Type 2" class="w-6 h-6" />
-                                                    <img x-show="event.type === 3" src="~/assets/img/mb-3.png" alt="Type 3" class="w-6 h-6" />
-                                                    <img x-show="event.type === 4" src="~/assets/img/mb-4.png" alt="Type 4" class="w-6 h-6" />
-                                                    <img x-show="event.type === 5" src="~/assets/img/mb-5.png" alt="Type 5" class="w-6 h-6" />
+                                                    <img x-show="event.type === 1" src="~/assets/img/mb-1.png" alt="Type 1" class="w-10 h-8" />
+                                                    <img x-show="event.type === 2" src="~/assets/img/mb-2.png" alt="Type 2" class="w-10 h-8" />
+                                                    <img x-show="event.type === 3" src="~/assets/img/mb-3.png" alt="Type 3" class="w-10 h-8" />
+                                                    <img x-show="event.type === 4" src="~/assets/img/mb-4.png" alt="Type 4" class="w-10 h-8" />
+                                                    <img x-show="event.type === 5" src="~/assets/img/mb-5.png" alt="Type 5" class="w-10 h-8" />
                                                 </div>
                                             </template>
                                         </div>
@@ -421,6 +421,7 @@
         left: 200px;
         bottom: 380px;
         display: block;
+        z-index: 10;
     }
 
     .vtc {
@@ -463,13 +464,14 @@
 
     .face-wrap {
         text-align: center;
-        margin-top: 100px;
+        margin-top: 12%;
     }
 
     .img-face {
-        margin-bottom: 20px;
+        bottom: 160px;
         width: 180px;
         height: auto;
+        margin-bottom: 20px;
     }
 
     .img-bg {
@@ -478,6 +480,7 @@
         width: 100%;
         height: auto;
         left: 0;
+        z-index: 5;
     }
 
     .img-cow {
@@ -486,6 +489,7 @@
         height: 200px;
         left: 100px;
         bottom: 150px;
+        z-index: 10;
     }
 
     .img-sun {
@@ -498,7 +502,7 @@
 
     .img-circle {
         position: absolute;
-        width: 53%;
+        width: 40%;
         height: auto;
         z-index: 9;
         bottom: 35%;

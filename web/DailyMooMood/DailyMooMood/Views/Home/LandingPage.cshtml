@@ -39,13 +39,13 @@
             </label>
             <input id="input-date" type="hidden" asp-for="Id" />
             @* <input id="input-date" type="hidden" asp-for="Date" /> *@
-            <div class="w-full my-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+            <div class="textarea-wrapper w-full my-4  border-dark-800 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-dark-600">
+                <div class="textarea-wrap px-4 py-2 bg-white rounded-t-sm dark:bg-gray-800">
                     <label asp-for="Comment" class="sr-only"></label>
                     <textarea asp-for="Comment" rows="4" class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required></textarea>
                 </div>
-                <div class="flex justify-end w-full">
-                    <button type="submit" class="inline-flex items-center py-2 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+                <div class="flex justify-center w-full">
+                    <button type="submit" class="inline-flex items-center py-2 px-4 my-2 text-xs font-medium text-center text-white bg-gray-700 rounded-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-900 hover:bg-gray-800">
                         Post comment
                     </button>
                 </div>
@@ -56,7 +56,9 @@
     <img src="~/assets/img/cow.png" class="img-cow" alt="">
 </div>
 <div class="bg-2">
-    <h2>Calendar</h2>
+    <div class="calendar-title-wrapper">
+        <img src="~/assets/img/calendar-title.png" class="calendar-title" alt="">
+    </div>
     <!-- This is an calendar component -->
     <div class="h-screen overflow-hidden flex items-center justify-center">
 
@@ -65,6 +67,17 @@
             [x-cloak] {
                 display: none;
             }
+            .textarea-wrapper{
+                position: relative;
+                z-index: 9999;
+            }
+            .texarea-wrapper textarea:focus{
+                border: none;
+            }
+            .textarea-wrap{
+                border: #000 solid 4px;
+                border-radius: 10px;
+            }}
         </style>
 
         <div class="antialiased sans-serif h-screen">
@@ -133,7 +146,7 @@
                                                 x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
 
                                             <template x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">
-                                                <div class="px-2 py-1 rounded-lg mt-1 overflow-hidden border"
+                                                <div class="px-2 py-1 rounded-lg mt-1 overflow-hidden"
                                                      :class="{
 															'border-blue-200 text-blue-800 bg-blue-100': event.event_theme === 'blue',
 															'border-red-200 text-red-800 bg-red-100': event.event_theme === 'red',
@@ -143,11 +156,11 @@
 														}">
                                                     <p x-text="event.event_title" class="text-sm truncate leading-tight"></p>
                                                     <!-- Check event type and display corresponding image -->
-                                                    <img x-show="event.type === 1" src="~/assets/img/mb-1.png" alt="Type 1" class="w-6 h-6" />
-                                                    <img x-show="event.type === 2" src="~/assets/img/mb-2.png" alt="Type 2" class="w-6 h-6" />
-                                                    <img x-show="event.type === 3" src="~/assets/img/mb-3.png" alt="Type 3" class="w-6 h-6" />
-                                                    <img x-show="event.type === 4" src="~/assets/img/mb-4.png" alt="Type 4" class="w-6 h-6" />
-                                                    <img x-show="event.type === 5" src="~/assets/img/mb-5.png" alt="Type 5" class="w-6 h-6" />
+                                                    <img x-show="event.type === 1" src="~/assets/img/mb-1.png" alt="Type 1" class="w-10 h-8" />
+                                                    <img x-show="event.type === 2" src="~/assets/img/mb-2.png" alt="Type 2" class="w-10 h-8" />
+                                                    <img x-show="event.type === 3" src="~/assets/img/mb-3.png" alt="Type 3" class="w-10 h-8" />
+                                                    <img x-show="event.type === 4" src="~/assets/img/mb-4.png" alt="Type 4" class="w-10 h-8" />
+                                                    <img x-show="event.type === 5" src="~/assets/img/mb-5.png" alt="Type 5" class="w-10 h-8" />
                                                 </div>
                                             </template>
                                         </div>
@@ -284,8 +297,8 @@
 </footer>
 <style>
     /* Hide the default checkbox */
-    input[type="checkbox"] {
-        display: none;
+    input[type="radio"] {
+        display: none !important;
     }
 
     .check-form label {
@@ -493,6 +506,7 @@
         width: 100%;
         height: auto;
         left: 0;
+        z-index: 5;
     }
 
     .img-cow {
@@ -501,6 +515,7 @@
         height: 200px;
         left: 100px;
         bottom: 150px;
+        z-index:10;
     }
 
     .img-sun {
@@ -545,4 +560,13 @@
         footer p {
             margin: 0;
         }
+            .calendar-title-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .calendar-title {
+        width: auto;
+        height: 80px;
+    }
 </style>
